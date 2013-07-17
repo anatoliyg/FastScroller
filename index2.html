@@ -1,0 +1,120 @@
+<html>
+	<head>
+
+		<style type="text/css">
+
+			#episode-wrapper{
+				
+				height: 50px;
+				overflow: hidden;
+				position: relative;
+				background-color: black;
+				left: 400px;
+			}
+
+			.episode{
+				list-style-type: none;
+				height: 50px;
+			}
+
+	
+
+			.arrow-left{
+				width: 30px;
+				height: 50px;
+				background-color: blue;
+
+			}
+
+			.arrow-right{
+				width: 30px;
+				height: 50px;
+				background-color: blue;
+
+			}
+
+
+			.purple{
+				background-color: purple;
+
+			}
+
+			.green{
+				background-color: green;
+
+			}
+
+			.yellow{
+
+				background-color: yellow;
+			}
+
+
+			.item{
+				display: inline-block;
+				white-space: nowrap;
+				vertical-align: top;
+			}
+
+			li{
+				display: inline;
+				width: 50px;
+				height: 30px;
+				background: red;
+				margin-left: 10px;
+
+			}
+
+		</style>
+
+		<script src="libs/jquery.js"></script>
+		<script src="libs/firmin-1.0.0.js"></script>
+		<script src="libs/TweenLite.js"></script>
+		<script src="libs/CSSPlugin.min.js"></script>
+		<script src="libs/CSSRulePlugin.min.js"></script>
+		<script src="libs/modernizr.js"></script>
+		<script src="libs/query.mousewheel.js"></script>
+		<script src="scroller.js"></script>
+
+		<script type="text/javascript">
+
+			$(function(){
+
+				var onTrigger = function(e){
+
+					alert ("trigged "+e.direction);
+				}
+
+
+				//var scroller = new FastScroller( $(".episode")[0], "parent", {leap : 200, endBounce : true}, onTrigger );
+
+			});
+
+			
+		</script>
+	</head>
+
+	<body>
+
+		<div id="episode-wrapper">
+
+			<div class="arrow-left item" data-scroll-left>
+			</div>
+			<ul class="episode item">
+				<li class="purple">a</li>
+				<li class="green">b</li>
+				<li class="purple">c</li>
+				<li class="green">d</li>
+				<li class="purple">e</li>
+				<li class="green">f</li>
+
+			</ul>
+
+			<div class="arrow-right item" data-scroll-right>
+			</div>
+
+		</div>
+
+	</body>
+
+</html>

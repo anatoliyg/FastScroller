@@ -1,0 +1,143 @@
+<html>
+	<head>
+		<style type="text/css">
+
+			#episode-wrapper{
+				width: 600px;
+				height: 300px;
+				overflow: hidden;
+				position: relative;
+				background-color: black;
+				position: relative;
+			}
+
+			.episode{
+
+				background-color: red;
+				display: inline-block;
+				white-space: nowrap;
+				vertical-align: top;
+				position: relative;
+			}
+
+			.episode-item{
+				display: inline-block;
+				white-space: nowrap;
+				vertical-align: top;
+				width: 100px;
+				height: 100%;
+				margin: 20px;
+				background-color: black;
+			}
+
+			.arrow-left{
+				position: absolute;
+				width: 30px;
+				height: 50px;
+				left: 0;
+				top: 40%;
+				background-color: blue;
+			}
+
+			.arrow-right{
+				position: absolute;
+				width: 30px;
+				height: 50px;
+				right: 0;
+				top: 40%;
+				background-color: blue;
+			}
+
+			.purple{
+				background-color: purple;
+			}
+
+			.green{
+				background-color: green;
+			}
+
+			.yellow{
+				background-color: yellow;
+			}
+		</style>
+
+		<script src="libs/jquery.js"></script>
+		<script src="libs/firmin-1.0.0.js"></script>
+		<script src="libs/TweenLite.js"></script>
+		<script src="libs/CSSPlugin.min.js"></script>
+		<script src="libs/CSSRulePlugin.min.js"></script>
+		<script src="libs/jquery.touchSwipe.js"></script>
+		<script src="libs/jquery.mousewheel.js"></script>
+		<script src="libs/modernizr.js"></script>
+		<script src="FastScroller.js"></script>
+
+		<script type="text/javascript">
+
+			$(function(){
+
+		        var onBounce = function(e){
+		        	console.log("bounce "+e.direction+" / "+e.currentTarget+" / "+e.type);
+		        }
+
+		        var onEndTrigged = function(e){
+		        	console.log("end "+e.direction+" / "+e.currentTarget+" / "+e.type);
+		        }
+		        
+				var scrollConfig = {
+								
+					divToScroll 		: $(".episode"),
+					parent 		 		: "parent",
+			        leap				: 300, 
+			        bounce 				: true,
+			        endFollowsBounce	: false,
+			        useKeyboard 		: true,
+			        useMouseWheel		: true,
+			        useTouch			: true,
+			        buttonPrefix 		: "data-page-scroll"
+			    };
+
+		        var theScroller = new FastScroller(scrollConfig, onBounce, onEndTrigged);
+			});
+
+		</script>
+	</head>
+
+	<body>
+
+		<div id="episode-wrapper">
+			<div class="episode">
+				<div class="episode-item purple"></div>
+				<div class="episode-item green"></div>
+				<div class="episode-item yellow"></div>
+				<div class="episode-item purple"></div>
+				<div class="episode-item green"></div>
+				<div class="episode-item yellow"></div>
+				<div class="episode-item purple"></div>
+				<div class="episode-item green"></div>
+				<div class="episode-item yellow"></div>
+				<div class="episode-item purple"></div>
+				<div class="episode-item green"></div>
+				<div class="episode-item yellow"></div>
+				<div class="episode-item purple"></div>
+				<div class="episode-item green"></div>
+				<div class="episode-item yellow"></div>
+				<div class="episode-item purple"></div>
+				<div class="episode-item green"></div>
+				<div class="episode-item yellow"></div>
+				<div class="episode-item purple"></div>
+				<div class="episode-item green"></div>
+				<div class="episode-item yellow"></div>
+				<div class="episode-item purple"></div>
+				<div class="episode-item green"></div>
+				<div class="episode-item yellow"></div>
+			</div>
+
+			<div class="arrow-left" data-page-scroll-left>
+			</div>
+
+			<div class="arrow-right" data-page-scroll-right>
+			</div>
+		</div>
+	</body>
+
+</html>
